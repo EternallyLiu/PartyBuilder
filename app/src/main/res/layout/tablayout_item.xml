@@ -3,18 +3,20 @@
     android:orientation="vertical" android:layout_width="wrap_content"
     android:layout_height="wrap_content">
     <ImageView
+        android:clickable="true"
         android:id="@+id/tab_iv"
         android:layout_width="22dp"
         android:layout_height="22dp"
         android:layout_gravity="center"
-        android:src="@mipmap/ic_launcher"/>
+        android:src="@drawable/selector_partybuilder"/>
 
     <TextView
+        android:clickable="true"
         android:id="@+id/tab_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="15sp"
+        android:textSize="14sp"
         android:padding="2dp"
         android:textColor="@color/selector_tablayout"
         android:text="标题测试"/>

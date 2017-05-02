@@ -42,9 +42,9 @@
         <android.support.design.widget.TabLayout
             android:id="@+id/tablayout"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
             app:tabBackground="@color/tabBackground"
-            app:tabIndicatorColor="#000"
+            app:tabIndicatorColor="@color/tabBackground"
             app:tabSelectedTextColor="#b4111c"
             app:tabTextColor="#7000" />
     </LinearLayout>
