@@ -2,12 +2,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.github.rayboot.project.BuilderParty.fragment.MineFragment">
+    tools:context="com.github.rayboot.project.BuilderParty.fragment.MakeBookFragment">
 
     <TextView
         android:id="@+id/tab_content_tv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="我的" />
+        android:text="一键成书" />
 
 </FrameLayout>
