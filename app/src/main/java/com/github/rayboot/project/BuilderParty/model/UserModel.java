@@ -15,11 +15,11 @@ public class UserModel {
     public long branch_id;
     public String branch_name;
     public String party_position;
-    public boolean custom_password;
+    public int custom_password;
     public String token;
     public Integer unread;
     public Integer collect_count;
-    public boolean is_admin;
+    public int is_admin;
     public int rank;
 
     public long getUser_id() {
@@ -102,20 +102,28 @@ public class UserModel {
         this.party_position = party_position;
     }
 
-    public boolean isCustom_password() {
-        return custom_password;
-    }
-
-    public void setCustom_password(boolean custom_password) {
-        this.custom_password = custom_password;
-    }
-
     public String getToken() {
         return token;
     }
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public int getCustom_password() {
+        return custom_password;
+    }
+
+    public void setCustom_password(int custom_password) {
+        this.custom_password = custom_password;
+    }
+
+    public int getIs_admin() {
+        return is_admin;
+    }
+
+    public void setIs_admin(int is_admin) {
+        this.is_admin = is_admin;
     }
 
     public Integer getUnread() {
@@ -132,14 +140,6 @@ public class UserModel {
 
     public void setCollect_count(Integer collect_count) {
         this.collect_count = collect_count;
-    }
-
-    public boolean is_admin() {
-        return is_admin;
-    }
-
-    public void setIs_admin(boolean is_admin) {
-        this.is_admin = is_admin;
     }
 
     public int getRank() {

@@ -10,12 +10,15 @@ import rx.schedulers.Schedulers;
  */
 public class SchedulersCompat {
 
-    private static final Observable.Transformer computationTransformer =
-            new Observable.Transformer() {
-                @Override
-                public Object call(Object observable) {
-                    return ((Observable) observable).subscribeOn(Schedulers.computation())
-                            .observeOn(AndroidSchedulers.mainThread());
-                }
-            };
+    private static final Observable.Transformer ioTransformer = new Observable.Transformer() {
+        @Override
+        public Object call(Object observable) {
+            return ((Observable) observable).subscribeOn(Schedulers.computation())
+                    .observeOn(AndroidSchedulers.mainThread());
+        }
+    };
+
+    public static <T>  Observable.Transformer<T,T> applyIoScheduler() {
+        return (Observable.Transformer<T, T>) ioTransformer;
+    }
 }

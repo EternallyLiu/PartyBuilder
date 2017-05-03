@@ -7,11 +7,11 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/builder_recycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
     <TextView
-        android:text="党建党建"
-      android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="党建平台" />
 
 </FrameLayout>

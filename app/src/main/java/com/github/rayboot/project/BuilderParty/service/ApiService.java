@@ -1,10 +1,15 @@
 package com.github.rayboot.project.BuilderParty.service;
 
-import com.github.rayboot.project.BuilderParty.service.response.LoginResponse;
+import com.github.rayboot.project.BuilderParty.model.modelobj.LoginDataObj;
+import com.github.rayboot.project.BuilderParty.model.modelobj.NewHomeObj;
+import com.github.rayboot.project.BuilderParty.service.body.LoginRequset;
+import com.github.rayboot.project.BuilderParty.service.response.BaseResponse;
 
+import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.HEAD;
+import retrofit2.http.Header;
 import retrofit2.http.POST;
-import retrofit2.http.Query;
 import rx.Observable;
 
 /**
@@ -17,7 +22,11 @@ public interface ApiService {
      * 登录接口
      */
     @POST("login")
-    Observable<LoginResponse> loginParty(@Query("phone") String phone,
-                                         @Query("password") String password);
+    Observable<BaseResponse<LoginDataObj>> loginParty(@Body LoginRequset loginbody);
 
+    /**
+     * 主页面数据接口
+     */
+    @GET("newhome")
+    Observable<BaseResponse<NewHomeObj>> getHomeContent(@Header("token") String token);
 }

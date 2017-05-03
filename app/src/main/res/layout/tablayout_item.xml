@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-    <ImageView
-        android:clickable="true"
-        android:id="@+id/tab_iv"
-        android:layout_width="22dp"
-        android:layout_height="22dp"
-        android:layout_gravity="center"
-        android:src="@drawable/selector_partybuilder"/>
+    android:id="@+id/ll_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
 
     <TextView
-        android:clickable="true"
         android:id="@+id/tab_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="14sp"
+        android:clickable="true"
         android:padding="2dp"
+        android:text="标题测试"
+        android:drawableTop="@mipmap/ic_launcher"
+        android:drawablePadding="2dp"
         android:textColor="@color/selector_tablayout"
-        android:text="标题测试"/>
+        android:textSize="14sp" />
 </LinearLayout>
+

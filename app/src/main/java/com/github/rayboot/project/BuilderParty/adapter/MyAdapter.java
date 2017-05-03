@@ -1,6 +1,7 @@
 package com.github.rayboot.project.BuilderParty.adapter;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -21,21 +22,17 @@ import java.util.List;
 
 public class MyAdapter extends FragmentPagerAdapter{
     private ArrayList<Fragment> mFragments;
-    private int[] mImages;
-    private String[] mStrings;
+    private String[] mTitles;
     private Context mContext;
+    private int[] mImages;
 
 
-    private View mTabView;
-    private TextView tab_tv;
-    private ImageView tab_iv;
-
-    public MyAdapter(FragmentManager fm, Context context, ArrayList<Fragment> fragments, int[] images,String[] strings) {
+    public MyAdapter(Context context,FragmentManager fm,ArrayList<Fragment> fragments,String[] titles,int[] images) {
         super(fm);
         this.mFragments = fragments;
-        mImages = images;
+        this.mTitles = titles;
         this.mContext = context;
-        this.mStrings = strings;
+        this.mImages = images;
     }
 
 
@@ -51,12 +48,14 @@ public class MyAdapter extends FragmentPagerAdapter{
     }
 
     public View getTabView(int position) {
-        mTabView = LayoutInflater.from(mContext).inflate(R.layout.tablayout_item, null);
-        tab_tv = (TextView) mTabView.findViewById(R.id.tab_tv);
-        tab_iv = (ImageView) mTabView.findViewById(R.id.tab_iv);
+        View tabView = LayoutInflater.from(mContext).inflate(R.layout.tablayout_item, null);
+        TextView tab_tv = (TextView) tabView.findViewById(R.id.tab_tv);
+        tab_tv.setText(mTitles[position]);
 
-        tab_tv.setText(mStrings[position]);
-        tab_iv.setImageDrawable(mContext.getResources().getDrawable(mImages[position]));
-        return mTabView;
+        Drawable drawable = mContext.getDrawable(mImages[position]);
+        drawable.setBounds(0, 0, drawable.getMinimumWidth()/2, drawable.getMinimumHeight()/2);
+        tab_tv.setCompoundDrawables(null, drawable, null, null);
+        return tabView;
     }
+
 }
