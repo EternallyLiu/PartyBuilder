@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/home_recycler_top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <LinearLayout
+            android:id="@+id/home_hor_ll1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.facebook.drawee.view.DraweeView
+                android:id="@+id/home_hor_dv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/home_hor_tv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="标题1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_hor_ll2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.facebook.drawee.view.DraweeView
+                android:id="@+id/home_hor_dv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/home_hor_tv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="标题2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_hor_ll3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.facebook.drawee.view.DraweeView
+                android:id="@+id/home_hor_dv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/home_hor_tv3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="标题3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_hor_ll4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.facebook.drawee.view.DraweeView
+                android:id="@+id/home_hor_dv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/home_hor_tv4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="标题4" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/builderparty_view_red"
+        android:layout_width="6dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_view_red" />
+
+    <TextView
+        android:id="@+id/builderparty_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:layout_toRightOf="@+id/builderparty_view_red"
+        android:text="学习园地"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/builderparty_tv_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:text="更多>"
+        android:textSize="18sp" />
+</RelativeLayout>

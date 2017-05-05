@@ -21,12 +21,15 @@ public interface ApiService {
     /**
      * 登录接口
      */
-    @POST("login")
+    @POST("ccp/login")
     Observable<BaseResponse<LoginDataObj>> loginParty(@Body LoginRequset loginbody);
 
     /**
      * 主页面数据接口
      */
-    @GET("newhome")
-    Observable<BaseResponse<NewHomeObj>> getHomeContent(@Header("token") String token);
+    @GET("ccp/newhome")
+    Observable<BaseResponse<NewHomeObj>> getHomeContent(@Header("token") String token,
+                                                        @Header("userid")long userid,
+                                                        @Header("platform")String platform,
+                                                        @Header("clientversion")String clientversion);
 }

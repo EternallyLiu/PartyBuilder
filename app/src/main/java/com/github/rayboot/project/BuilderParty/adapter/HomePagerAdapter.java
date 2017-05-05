@@ -20,14 +20,14 @@ import java.util.List;
  * Created by liupei on 2017/5/2.
  */
 
-public class MyAdapter extends FragmentPagerAdapter{
+public class HomePagerAdapter extends FragmentPagerAdapter{
     private ArrayList<Fragment> mFragments;
     private String[] mTitles;
     private Context mContext;
     private int[] mImages;
 
 
-    public MyAdapter(Context context,FragmentManager fm,ArrayList<Fragment> fragments,String[] titles,int[] images) {
+    public HomePagerAdapter(Context context, FragmentManager fm, ArrayList<Fragment> fragments, String[] titles, int[] images) {
         super(fm);
         this.mFragments = fragments;
         this.mTitles = titles;

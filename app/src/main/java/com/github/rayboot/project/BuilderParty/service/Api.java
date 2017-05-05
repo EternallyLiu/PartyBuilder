@@ -13,7 +13,7 @@ public class Api{
 
     public Api() {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://stg2.v5time.net/ccp/")
+                .baseUrl("http://ccp.timeface.cn/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();

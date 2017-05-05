@@ -2,14 +2,13 @@ package com.github.rayboot.project.BuilderParty.fragment;
 
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.github.rayboot.project.R;
 
-public class MakeBookFragment extends Fragment {
+public class MakeBookFragment extends BaseFragment {
 
 
     public MakeBookFragment() {
