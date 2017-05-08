@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <include layout="@layout/home_recycler_top" />
@@ -20,21 +20,23 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <com.facebook.drawee.view.DraweeView
+            <com.facebook.drawee.view.SimpleDraweeView
                 android:id="@+id/home_hor_dv1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:src="@mipmap/ic_launcher" />
 
             <TextView
                 android:id="@+id/home_hor_tv1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:layout_weight="1"
+                android:ellipsize="end"
                 android:gravity="center"
                 android:maxLines="1"
-                android:ellipsize="end"
-                android:text="标题1" />
+                android:text="标题1"
+                android:textColor="@color/black" />
         </LinearLayout>
 
         <LinearLayout
@@ -45,21 +47,23 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <com.facebook.drawee.view.DraweeView
+            <com.facebook.drawee.view.SimpleDraweeView
                 android:id="@+id/home_hor_dv2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:src="@mipmap/ic_launcher" />
 
             <TextView
                 android:id="@+id/home_hor_tv2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:layout_weight="1"
+                android:ellipsize="end"
                 android:gravity="center"
                 android:maxLines="1"
-                android:ellipsize="end"
-                android:text="标题2" />
+                android:text="标题2"
+                android:textColor="@color/black" />
         </LinearLayout>
 
         <LinearLayout
@@ -70,21 +74,23 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <com.facebook.drawee.view.DraweeView
+            <com.facebook.drawee.view.SimpleDraweeView
                 android:id="@+id/home_hor_dv3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:src="@mipmap/ic_launcher" />
 
             <TextView
                 android:id="@+id/home_hor_tv3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:layout_weight="1"
+                android:ellipsize="end"
                 android:gravity="center"
                 android:maxLines="1"
-                android:ellipsize="end"
-                android:text="标题3" />
+                android:text="标题3"
+                android:textColor="@color/black" />
         </LinearLayout>
 
         <LinearLayout
@@ -95,19 +101,26 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <com.facebook.drawee.view.DraweeView
+            <com.facebook.drawee.view.SimpleDraweeView
                 android:id="@+id/home_hor_dv4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:src="@mipmap/ic_launcher" />
 
             <TextView
                 android:id="@+id/home_hor_tv4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="标题4" />
+                android:text="标题4"
+                android:textColor="@color/black" />
         </LinearLayout>
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:background="@color/black_blackground" />
 </LinearLayout>

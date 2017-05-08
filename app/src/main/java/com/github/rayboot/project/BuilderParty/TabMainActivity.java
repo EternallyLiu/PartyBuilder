@@ -22,8 +22,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class TabMainActivity extends BaseAppCompatActivity implements View.OnClickListener {
-    @Bind(R.id.toolbar)
-    Toolbar toolbar;
+
     @Bind(R.id.home_viewpager)
     MyViewPager homeViewpager;
     @Bind(R.id.tablayout)
@@ -35,11 +34,6 @@ public class TabMainActivity extends BaseAppCompatActivity implements View.OnCli
         Fresco.initialize(this);
         setContentView(R.layout.activity_tab_main);
         ButterKnife.bind(this);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        getSupportActionBar().setHomeButtonEnabled(false);
-        getSupportActionBar().setTitle("");
-
         initTabLayout();
     }
 
@@ -72,7 +66,7 @@ public class TabMainActivity extends BaseAppCompatActivity implements View.OnCli
         }
 
         homeViewpager.setOffscreenPageLimit(3);
-//        homeViewpager.setCurrentItem(0);
+        homeViewpager.setCurrentItem(0);
     }
 
     @Override
@@ -82,5 +76,11 @@ public class TabMainActivity extends BaseAppCompatActivity implements View.OnCli
                 homeViewpager.setCurrentItem((int) v.getTag(R.string.tag_index));
                 break;
         }
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        homeViewpager.setCurrentItem(0);
     }
 }

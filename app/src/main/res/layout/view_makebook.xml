@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/makebook_tv_left"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_makebook_tab_left"
+        android:padding="5dp"
+        android:gravity="center"
+        android:text="学习资料"
+        android:textColor="@color/selector_makebook_tab_tv"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/makebook_tv_center"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_makebook_tab_center"
+        android:padding="5dp"
+        android:text="推荐作品"
+        android:gravity="center"
+        android:textColor="@color/selector_makebook_tab_tv"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/makebook_tv_right"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_makebook_tab_right"
+        android:padding="5dp"
+        android:text="我的作品"
+        android:gravity="center"
+        android:textColor="@color/selector_makebook_tab_tv"
+        android:textSize="16sp" />
+</LinearLayout>

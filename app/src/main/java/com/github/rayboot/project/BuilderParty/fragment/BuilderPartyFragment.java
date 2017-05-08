@@ -3,12 +3,14 @@ package com.github.rayboot.project.BuilderParty.fragment;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.github.rayboot.project.BuilderParty.adapter.BuilderPartyAdapter;
+import com.github.rayboot.project.BuilderParty.TabMainActivity;
+import com.github.rayboot.project.BuilderParty.adapter.BaseAdapter;
 import com.github.rayboot.project.BuilderParty.adapter.cell.BaseCell;
 import com.github.rayboot.project.BuilderParty.adapter.cell.HomeHorCell;
 import com.github.rayboot.project.BuilderParty.adapter.cell.HomeVerCell;
@@ -24,11 +26,13 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class BuilderPartyFragment extends BaseFragment {
+    @Bind(R.id.toolbar)
+    Toolbar toolbar;
     @Bind(R.id.builder_recycler)
     RecyclerView builderRecycler;
 
     private List<BaseCell> cells = new ArrayList<>();
-    private BuilderPartyAdapter adapter;
+    private BaseAdapter adapter;
 
     public BuilderPartyFragment() {
     }
@@ -38,6 +42,11 @@ public class BuilderPartyFragment extends BaseFragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_builder_party, container, false);
         ButterKnife.bind(this, view);
+        ((TabMainActivity)getActivity()).setSupportActionBar(toolbar);
+        ((TabMainActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        ((TabMainActivity)getActivity()).getSupportActionBar().setHomeButtonEnabled(false);
+        ((TabMainActivity)getActivity()).getSupportActionBar().setTitle("");
+
         initRecyclerView();
         return view;
     }
@@ -49,7 +58,7 @@ public class BuilderPartyFragment extends BaseFragment {
                 .subscribe(newHomeObjBaseResponse -> {
                     ArrayList<ContentModel> homeModelList = newHomeObjBaseResponse.getData().getContent_list();
                     initCells(homeModelList);
-                    adapter = new BuilderPartyAdapter((ArrayList) cells);
+                    adapter = new BaseAdapter((ArrayList) cells);
                     builderRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
                     builderRecycler.setAdapter(adapter);
                 }, throwable -> {

@@ -20,7 +20,7 @@ import java.util.ArrayList;
 public class HomeVerCell extends BaseCell{
     public ContentModel contentModel;
     public ArrayList<ContentModel> mData;
-    private LayoutInflater inflater;
+
     private TextView home_ver_tv1;
     private TextView home_ver_tv2;
     private TextView home_ver_tv3;
@@ -65,13 +65,24 @@ public class HomeVerCell extends BaseCell{
         mTvList.add(home_ver_tv3);
 
         for (int i = 0; i < mData.size(); i++) {
+            if (i == 3) {
+                break;
+            }
             String title = mData.get(i).getContent_title();
-            if (mData.size() < 3) {
-                for (int j = 3; j > mData.size(); i--) {
-                    mTvList.get(j).setVisibility(View.GONE);
+            mTvList.get(i).setText(title);
+        }
+
+        //隐藏掉无用的组件
+        if (mData.size() < 3) {
+            for (int j = 3; j > mData.size(); j--) {
+                mTvList.get(j - 1).setVisibility(View.GONE);
+                if (j != 3) {
+                    mLines.get(j - 1).setVisibility(View.GONE);
+                    if (j == 2) {
+                        mLines.get(0).setVisibility(View.GONE);
+                    }
                 }
             }
-            mTvList.get(i).setText(title);
         }
 
         home_ver_top_title.setText(contentModel.getContent_title());

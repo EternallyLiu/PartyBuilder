@@ -13,10 +13,10 @@ import java.util.List;
  * Created by liupei on 2017/5/4.
  */
 
-public class BuilderPartyAdapter<T extends BaseCell> extends RecyclerView.Adapter<BaseHolder> {
+public class BaseAdapter<T extends BaseCell> extends RecyclerView.Adapter<BaseHolder> {
     private ArrayList<T> cells;
 
-    public BuilderPartyAdapter(ArrayList<T> cells) {
+    public BaseAdapter(ArrayList<T> cells) {
         this.cells = cells;
     }
 

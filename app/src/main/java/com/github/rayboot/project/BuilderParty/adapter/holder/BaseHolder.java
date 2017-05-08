@@ -6,9 +6,11 @@ import android.util.SparseArray;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.facebook.drawee.view.DraweeView;
+import com.facebook.drawee.view.SimpleDraweeView;
 
 /**
  * Created by liupei on 2017/5/4.
@@ -44,7 +46,11 @@ public class BaseHolder extends RecyclerView.ViewHolder {
         return getView(resId);
     }
 
-    public DraweeView getDraweeView(int resId) {
+    public SimpleDraweeView getDraweeView(int resId) {
+        return getView(resId);
+    }
+
+    public LinearLayout getLinearLayout(int resId) {
         return getView(resId);
     }
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <include layout="@layout/home_recycler_top" />
@@ -14,6 +14,7 @@
         android:lines="1"
         android:maxLines="1"
         android:padding="10dp"
+        android:textColor="@color/black"
         android:text="这是测试的第一个摘要啊啊啊啊啊啊啊啊"
         android:textSize="16sp" />
 
@@ -33,6 +34,7 @@
         android:lines="1"
         android:maxLines="1"
         android:padding="10dp"
+        android:textColor="@color/black"
         android:text="这是测试的第二个摘要啊啊啊啊啊啊啊啊"
         android:textSize="16sp" />
 
@@ -52,7 +54,12 @@
         android:lines="1"
         android:maxLines="1"
         android:padding="10dp"
+        android:textColor="@color/black"
         android:text="这是测试的第三个摘要啊啊啊啊啊啊啊啊"
         android:textSize="16sp" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:background="@color/black_blackground" />
 </LinearLayout>

@@ -1,13 +1,43 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.github.rayboot.project.BuilderParty.fragment.MakeBookFragment">
 
-    <TextView
-        android:id="@+id/tab_content_tv"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center">
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         >
+
+         <include layout="@layout/view_makebook"
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_centerHorizontal="true"
+             />
+
+         <TextView
+             android:id="@+id/makebook_search"
+             android:layout_width="30dp"
+             android:layout_height="30dp"
+             android:layout_alignParentRight="true"
+             android:background="@drawable/search"
+             android:layout_centerVertical="true"
+             android:layout_marginRight="10dp"/>
+     </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/makebook_recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="一键成书" />
+        />
 
-</FrameLayout>
+</LinearLayout>

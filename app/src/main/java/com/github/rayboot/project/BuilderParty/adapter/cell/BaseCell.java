@@ -1,6 +1,7 @@
 package com.github.rayboot.project.BuilderParty.adapter.cell;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.github.rayboot.project.BuilderParty.adapter.holder.BaseHolder;
@@ -11,6 +12,7 @@ import com.github.rayboot.project.BuilderParty.adapter.holder.BaseHolder;
 
 public abstract class BaseCell {
     public Context mContext;
+    public LayoutInflater inflater;
 
     //子类cell实现该方法来加载自己的布局
     public abstract BaseHolder OncreateViewHolder(ViewGroup viewGroup,int itemType);
