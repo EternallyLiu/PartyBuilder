@@ -14,7 +14,7 @@ import java.util.List;
  */
 
 public class BaseAdapter<T extends BaseCell> extends RecyclerView.Adapter<BaseHolder> {
-    private ArrayList<T> cells;
+    public ArrayList<T> cells;
 
     public BaseAdapter(ArrayList<T> cells) {
         this.cells = cells;

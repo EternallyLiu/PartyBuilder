@@ -4,7 +4,7 @@ package com.github.rayboot.project.BuilderParty.model;
  * Created by liupei on 2017/5/8.
  */
 
-public class BookModel{
+public class BookStudyInfoModel {
     private long content_time;
     private String content_title;
     private String content_id;

@@ -1,6 +1,6 @@
 package com.github.rayboot.project.BuilderParty.model.modelobj;
 
-import com.github.rayboot.project.BuilderParty.model.BookModel;
+import com.github.rayboot.project.BuilderParty.model.BookStudyInfoModel;
 
 import java.util.ArrayList;
 
@@ -8,12 +8,12 @@ import java.util.ArrayList;
  * Created by liupei on 2017/5/8.
  */
 
-public class BooksObj {
+public class BooksStudyInfoObj {
     private int current_page;
     private int total_page;
     private int total_count;
 
-    private ArrayList<BookModel> data_list;
+    private ArrayList<BookStudyInfoModel> data_list;
 
     public int getCurrent_page() {
         return current_page;
@@ -31,11 +31,11 @@ public class BooksObj {
         this.total_page = total_page;
     }
 
-    public ArrayList<BookModel> getBook_list() {
+    public ArrayList<BookStudyInfoModel> getBook_list() {
         return data_list;
     }
 
-    public void setBook_list(ArrayList<BookModel> book_list) {
+    public void setBook_list(ArrayList<BookStudyInfoModel> book_list) {
         this.data_list = book_list;
     }
 

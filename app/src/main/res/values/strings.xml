@@ -17,4 +17,6 @@
     <string name="tag_obj">传递对象</string>
     <string name="tag_ex">传递扩展信息</string>
     <string name="app_home">安徽出版集团党建工作平台</string>
+    <string name="print">申请打印</string>
+    <string name="share">分享</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.github.rayboot.project.BuilderParty.service;
 
-import com.github.rayboot.project.BuilderParty.model.modelobj.BooksObj;
+import com.github.rayboot.project.BuilderParty.model.modelobj.BooksCommendObj;
+import com.github.rayboot.project.BuilderParty.model.modelobj.BooksStudyInfoObj;
 import com.github.rayboot.project.BuilderParty.model.modelobj.LoginDataObj;
 import com.github.rayboot.project.BuilderParty.model.modelobj.NewHomeObj;
 import com.github.rayboot.project.BuilderParty.service.body.LoginRequset;
@@ -37,12 +38,22 @@ public interface ApiService {
     /**
      * 一键成书 学习资料接口
      */
-    @GET("ccp/books")
-    Observable<BaseResponse<BooksObj>> getStudyInfo(@Header("token") String token,
-                                                    @Header("userid") long userid,
-                                                    @Header("platform") String platform,
-                                                    @Header("clientversion") String clientversion,
-                                                    @Query("request_type") int request_type,
-                                                    @Query("current_page") int current_page,
-                                                    @Query("page_size") int page_size);
+    @GET("ccp/books?request_type=1")
+    Observable<BaseResponse<BooksStudyInfoObj>> getStudyInfoBooks(@Header("token") String token,
+                                                                  @Header("userid") long userid,
+                                                                  @Header("platform") String platform,
+                                                                  @Header("clientversion") String clientversion,
+                                                                  @Query("current_page") int current_page,
+                                                                  @Query("page_size") int page_size);
+
+    /**
+     * 一键成书 推荐作品接口
+     */
+    @GET("ccp/books?request_type=2")
+    Observable<BaseResponse<BooksCommendObj>> getCommendBooks(@Header("token") String token,
+                                                              @Header("userid") long userid,
+                                                              @Header("platform") String platform,
+                                                              @Header("clientversion") String clientversion,
+                                                              @Query("current_page") int current_page,
+                                                              @Query("page_size") int page_size);
 }

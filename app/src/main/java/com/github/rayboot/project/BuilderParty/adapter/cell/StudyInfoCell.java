@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.facebook.drawee.view.DraweeView;
 import com.github.rayboot.project.BuilderParty.adapter.holder.BaseHolder;
-import com.github.rayboot.project.BuilderParty.model.BookModel;
+import com.github.rayboot.project.BuilderParty.model.BookStudyInfoModel;
 import com.github.rayboot.project.R;
 
 /**
@@ -17,11 +17,11 @@ import com.github.rayboot.project.R;
  */
 
 public class StudyInfoCell extends BaseCell{
-    private BookModel bookModel;
+    private BookStudyInfoModel bookStudyInfoModel;
 
-    public StudyInfoCell(Context context, BookModel bookModel) {
+    public StudyInfoCell(Context context, BookStudyInfoModel bookStudyInfoModel) {
         this.mContext = context;
-        this.bookModel = bookModel;
+        this.bookStudyInfoModel = bookStudyInfoModel;
         inflater = LayoutInflater.from(mContext);
     }
 
@@ -36,8 +36,8 @@ public class StudyInfoCell extends BaseCell{
         DraweeView make_studyinfo_dv = baseHolder.getDraweeView(R.id.make_studyinfo_dv);
         TextView make_studyinfo_tv = baseHolder.getTextView(R.id.make_studyinfo_tv);
 
-        make_studyinfo_dv.setImageURI(Uri.parse(bookModel.getContent_icon()));
-        make_studyinfo_tv.setText(bookModel.getContent_title());
+        make_studyinfo_dv.setImageURI(Uri.parse(bookStudyInfoModel.getContent_icon()));
+        make_studyinfo_tv.setText(bookStudyInfoModel.getContent_title());
     }
 
     @Override

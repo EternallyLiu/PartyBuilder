@@ -11,33 +11,56 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimaryDark"
         android:gravity="center">
-     <RelativeLayout
-         android:layout_width="match_parent"
-         android:layout_height="match_parent"
-         >
 
-         <include layout="@layout/view_makebook"
-             android:layout_height="wrap_content"
-             android:layout_width="wrap_content"
-             android:layout_centerHorizontal="true"
-             />
 
-         <TextView
-             android:id="@+id/makebook_search"
-             android:layout_width="30dp"
-             android:layout_height="30dp"
-             android:layout_alignParentRight="true"
-             android:background="@drawable/search"
-             android:layout_centerVertical="true"
-             android:layout_marginRight="10dp"/>
-     </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                layout="@layout/view_makebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/makebook_search"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/search" />
+        </RelativeLayout>
 
     </android.support.v7.widget.Toolbar>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/makebook_recycler"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/make_commend_tv_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="没有任何数据哦~"
+            android:textSize="23sp"
+            android:visibility="gone" />
+
+        <com.cjj.MaterialRefreshLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/makebook_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:overlay="false"
+            app:wave_show="false"
+            app:isLoadMore="true"
+            >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/makebook_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        </com.cjj.MaterialRefreshLayout>
+    </RelativeLayout>
 </LinearLayout>
